@@ -1,5 +1,5 @@
 
-//Analisis del listado de los puntos de acceso a internet de la Red WiFi de País Digital 
+//Analisis del listado de puntos de acceso a internet de la Red WiFi de 'País Digital' 
 //que brinda acceso gratuito a internet en espacios y dependencias públicas en Argentina
 //Fuente de descarga del dataset: https://www.datos.gob.ar/dataset/jgm-puntos-wifi-pais-digital
 
