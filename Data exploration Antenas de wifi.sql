@@ -93,14 +93,33 @@ ORDER BY identificador
 
 
 
--- Listado de antenas con latitud y longitud indefinida
 
-SELECT  identificador
-	,latitud,longitud
+-- Lista de antenas con latitud y longitud indefinida
+
+SELECT identificador, latitud,longitud
 FROM [conectiwidad-wifi]
-WHERE latitud = 0
-AND longitud = 0
+WHERE latitud LIKE 0.000000
+AND longitud LIKE 0.000000	
 ORDER BY identificador
+
+
+
+
+
+
+-- Cantidad de antenas con latitud y longitud indefinida
+SELECT COUNT(identificador) Total_Antenas,(
+SELECT COUNT(identificador)
+FROM [conectiwidad-wifi]
+WHERE latitud LIKE 0.000000
+AND longitud LIKE 0.000000
+) 'Sin_Ubicacion'
+FROM [conectiwidad-wifi]
+
+
+
+
+
 
 -- Cuenta de antenas por provincia
 SELECT  provincia
@@ -111,6 +130,8 @@ SELECT  provincia
   FROM [dbo].[conectiwidad-wifi]
   GROUP BY provincia,municipio
   ORDER BY provincia,suma_cant_antenas
+
+
 
 
 --SELECT * FROM [conectiwidad-wifi] order by id
