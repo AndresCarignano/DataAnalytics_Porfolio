@@ -85,8 +85,8 @@ SELECT  identificador
 	,latitud
 	,longitud
 FROM [conectiwidad-wifi]
-WHERE latitud != 0
-AND longitud != 0
+WHERE latitud NOT LIKE 0.000000
+AND longitud NOT LIKE 0.000000
 ORDER BY identificador
 
 
