@@ -30,7 +30,7 @@ SELECT owner, COUNT(name) cantidad
   WHERE owner_type LIKE 'Organization'
   GROUP BY owner
   ORDER BY cantidad DESC;
-
+  
 
 
 
